@@ -80,7 +80,7 @@ alias edit-lightdm='sudo nvim /etc/lightdm/lightdm.conf'
 alias edit-nvim='nvim ~/.config/nvim/init.vim'
 alias edit-polybar='nvim ~/.config/polybar/config'
 alias edit-polylaunch='nvim ~/.config/polybar/launch.sh'
-alias edit-rofi='nvim ~/.config/rofi/glowMLG.rasi'
+alias edit-rofi='nvim ~/.config/rofi/full.rasi'
 alias edit-sxhkd='nvim ~/.config/sxhkd/sxhkdrc'
 alias edit-webkit2='sudo nvim /etc/lightdm/lightdm-webkit2-greeter.conf'
 alias edit-xprofile='nvim ~/.xprofile'
@@ -88,6 +88,7 @@ alias edit-zsh='nvim ~/.zshrc'
 alias edit-thinkfan='sudo nvim /etc/thinkfan.conf'
 alias edit-compton='nvim ~/.config/compton.conf'
 alias edit-clearine='nvim ~/.config/clearine.conf'
+alias edit-betterockscreen='nvim ~/.config/betterlockscreenrc'
 alias load-average="uptime | grep -ohe 'load average[s:][: ].*' | awk '{ print $3" "$4" "$5"," }' | sed 's/,//g'"
 
 # - - - System - - -
