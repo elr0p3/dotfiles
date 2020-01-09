@@ -162,7 +162,7 @@ super + alt + f
 super + alt + t
     telegram-desktop
 # open file sistem
-super + alt + d
+super + alt + s
     thunar
 # open rofi
 alt + f
