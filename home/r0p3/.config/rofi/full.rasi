@@ -11,7 +11,7 @@ configuration {
 
 
 * {
-    active-background: #c85863;
+    active-background: #576c4c; //C85863
     active-foreground: @foreground;
     normal-background: @background;
     normal-foreground: @foreground;
@@ -25,7 +25,7 @@ configuration {
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: #C85863;
+    selected-active-background: #576c4c; //C85863
     selected-active-foreground: @foreground;
     selected-normal-background: #DC6B37;
     selected-normal-foreground: @foreground;
@@ -45,7 +45,7 @@ configuration {
 	hide-scrollbar:              "true";
 	margin:                      0px;
 	padding:                     20px;
-	font:            "Roboto Regular 11";
+	font:            "sf mono 11"; // Roboto Regular 11
 }
 
 window {
