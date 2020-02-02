@@ -8,6 +8,8 @@ export LC_ALL=en_US.UTF-8
 autoload -Uz promptinit
 promptinit
 prompt pure
+zstyle :prompt:pure:path color 'magenta'
+PROMPT='%(?.%F{blue}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
 # plugins=(git)
 
 
