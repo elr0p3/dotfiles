@@ -12,3 +12,6 @@ redshift -O 3000
 xrandr --output eDP-1 --mode 1920x1080 --rate 59.98
 
 # $HOME/.config/polybar/launch.sh
+
+# export AWT_TOOLKIT=MToolkit
+# wmname compiz
