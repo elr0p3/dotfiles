@@ -43,6 +43,9 @@ PROMPT='%(?.%F{blue}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
     # fi
 # }
 
+# - - - PATH - - -
+PATH=$PATH:~/.local/bin
+
 # - - - Initial config - - -
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -91,6 +94,8 @@ alias edit-thinkfan='sudo nvim /etc/thinkfan.conf'
 alias edit-compton='nvim ~/.config/compton.conf'
 alias edit-clearine='nvim ~/.config/clearine.conf'
 alias edit-betterockscreen='nvim ~/.config/betterlockscreenrc'
+alias edit-xinitrc='nvim ~/.xinitrc'
+alias edit-javaWMdeloscojones='nvim /etc/profile.d/jre.sh'
 alias load-average="uptime | grep -ohe 'load average[s:][: ].*' | awk '{ print $3" "$4" "$5"," }' | sed 's/,//g'"
 
 # - - - System - - -
@@ -99,6 +104,34 @@ alias memused="free -h|awk '/^Mem:/ {print $3  $2}'"
 alias cputemp="sensors|awk '/^temp1/ {print $2}'"
 alias topmem='ps axch -o cmd:15,%mem --sort=-%mem|head'
 alias topcpu='ps axch -o cmd:15,%cpu --sort=-%mem|head'
+
+
+
+# Extract compressed files
+function ex
+{
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)  tar -xjvf $1    ;;
+            *.tar.gz)   tar -xzvf $1    ;;
+            *.tar.xz)   tar -xJvf $1    ;;
+            *.bz2)      bunzip2 $1      ;;
+            *.rar)      unrar -x $1     ;;
+            *.gz)       gunzip $1       ;;
+            *.xz)       unxz $1         ;;
+            *.txz)      tar -xJvf $1    ;;
+            *.tar)      tar -xvf $1     ;;
+            *.tbz2)     tar -xjvf $1    ;;
+            *.tgz)      tar -xzvf $1    ;;
+            *.zip)      unzip $1        ;;
+            *.Z)        uncompress $1   ;;
+            *.7z)       7z -xv $1       ;;
+            *)          echo "'$1' cannot be extracted via ex()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
 
 
 # Show last 10 programs installeds, orphan packages and the cache
