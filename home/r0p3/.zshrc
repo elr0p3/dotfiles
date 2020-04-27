@@ -76,6 +76,7 @@ _comp_options+=(globdots)		# Include hidden files.
 alias ll='ls -laF --color'
 alias py='python3'
 alias :q='exit'
+alias fs='ranger'
 
 # Configuration
 alias edit-bspwm='nvim ~/.config/bspwm/bspwmrc'
