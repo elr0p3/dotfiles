@@ -105,6 +105,7 @@ alias memused="free -h|awk '/^Mem:/ {print $3  $2}'"
 alias cputemp="sensors|awk '/^temp1/ {print $2}'"
 alias topmem='ps axch -o cmd:15,%mem --sort=-%mem|head'
 alias topcpu='ps axch -o cmd:15,%cpu --sort=-%mem|head'
+alias service-enbl='systemctl list-unit-files --state=enabled'
 
 
 
