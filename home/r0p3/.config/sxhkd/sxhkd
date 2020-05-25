@@ -166,7 +166,7 @@ super + alt + s
     thunar
 # open rofi
 alt + f
-    rofi -modi run -show run -theme $HOME/.config/rofi/arch -show-icons
+    rofi -modi run -show run -theme $HOME/.config/rofi/full -show-icons
 # open python
 super + alt + p
     kitty -e python3
@@ -177,5 +177,9 @@ super + alt + n
 Print
     deepin-screenshot
 # exit menu
-ctrl +alt + q
+ctrl + alt + q
     clearine
+# lock screen
+ctrl + alt + l
+    i3lock
+# betterlockscreen -l dim
