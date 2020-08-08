@@ -9,8 +9,9 @@ autoload -Uz promptinit
 promptinit
 prompt pure
 zstyle :prompt:pure:path color 'magenta'
-PROMPT='%(?.%F{blue}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
-# plugins=(git)
+# PROMPT='%(?.%F{blue}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
+zstyle ':prompt:pure:prompt:success' color blue 
+zstyle ':prompt:pure:prompt:error' color red
 
 
 # - - - Custom Prompt - - -
@@ -61,7 +62,7 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# vi mode
+# - - - vi mode - - -
 # bindkey -v
 # export KEYTIMEOUT=1
 
@@ -73,9 +74,11 @@ _comp_options+=(globdots)		# Include hidden files.
 # bindkey -v '^?' backward-delete-char
 
 # - - - Alias - - -
-alias ll='ls -laF --color'
+# alias ll='ls -laF --color'
+alias ll='ls -laF'
 alias py='python3'
 alias :q='exit'
+alias q='exit'
 alias fs='ranger'
 
 # Configuration
@@ -103,6 +106,7 @@ alias load-average="uptime | grep -ohe 'load average[s:][: ].*' | awk '{ print $
 alias sysenable='systemctl list-unit-files --state=enabled'
 alias memused="free -h|awk '/^Mem:/ {print $3  $2}'"
 alias cputemp="sensors|awk '/^temp1/ {print $2}'"
+alias gputemp="nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"
 alias topmem='ps axch -o cmd:15,%mem --sort=-%mem|head'
 alias topcpu='ps axch -o cmd:15,%cpu --sort=-%mem|head'
 alias service-enbl='systemctl list-unit-files --state=enabled'
