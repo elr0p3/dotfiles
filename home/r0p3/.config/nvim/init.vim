@@ -8,6 +8,9 @@ set encoding=utf-8
 " 'is' 'incsearch'        show partial matches for a search phrase
 " 'hls' 'hlsearch'        highlight all matching phrases
 
+" Pal raton
+set mouse=a
+
 " 1 tab == 4 spaces, with intelligent indenting
 set shiftwidth=4
 set tabstop=4
@@ -43,7 +46,6 @@ set splitbelow
 highlight ColorColumn ctermbg=236
 command Term :split | resize 6 | term
 noremap ,t :Term<CR>
-
 
 "  ----- PLUGINS -----
 
@@ -161,6 +163,9 @@ let NERDTreeWinSize=25
 "colorscheme one
 
 " Gruvbox
+" set bg=dark https://www.vim.org/scripts/script.php?script_id=4349
+" set background=dark
+" let g:gruvbox_contrast_dark='soft'
 colorscheme gruvbox
 
 " Dracula
