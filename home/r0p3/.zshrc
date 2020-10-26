@@ -46,6 +46,7 @@ zstyle ':prompt:pure:prompt:error' color red
 
 # - - - PATH - - -
 PATH=$PATH:~/.local/bin
+export JAVA_HOME=/usr/lib/jvm/java-14-openjdk
 
 # - - - Initial config - - -
 # Lines configured by zsh-newuser-install
@@ -80,6 +81,8 @@ alias py='python3'
 alias :q='exit'
 alias q='exit'
 alias fs='ranger'
+alias wireshark-sudo='sudo wireshark'
+alias update='/usr/bin/checkupdates'
 
 # Configuration
 alias edit-bspwm='nvim ~/.config/bspwm/bspwmrc'
@@ -152,6 +155,7 @@ function clean
   echo "CACHE CLEANING:"
   paccache -v -d
 }
+alias clean-all='sudo pacman -Rsn $(yay -Qqtd)'
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
