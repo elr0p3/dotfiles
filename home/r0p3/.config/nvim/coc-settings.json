@@ -19,3 +19,31 @@
 }
 
 
+{
+
+    "python.jediEnabled": false,
+    "python.analysis.disabled": ["unresolved-import", "undefined-variable"],
+    "python.linting.pep8Enabled": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+
+    "javascript.validate.enable": false,
+    "javascript.suggestionActions.enabled": false,
+
+    "typescript.validate.enable": false,
+    "typescript.suggestionActions.enabled": false,
+    
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+            "rootPatterns": [".ccls-root", "compile_commands.json"],
+            "initializationOptions": {
+                "cache": {
+                    "directory": ".ccls-cache"
+                }
+            }
+        }
+    }
+
+}
