@@ -14,8 +14,13 @@ set mouse=a
 " 1 tab == 4 spaces, with intelligent indenting
 set shiftwidth=4
 set tabstop=4
-set expandtab
+"softtabstop
+"smarttab
+set noexpandtab
 set cinkeys-=:
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 noexpandtab
 
 " Setting vertical line
 set colorcolumn=79
@@ -44,7 +49,7 @@ set cursorline
 " ----- COMMANDS -----
 set splitbelow
 highlight ColorColumn ctermbg=236
-command Term :split | resize 6 | term
+command Term :split | resize 16 | term
 noremap ,t :Term<CR>
 
 "  ----- PLUGINS -----
@@ -82,19 +87,19 @@ Plug 'ryanoasis/vim-devicons'
 
 " Themes
 " https://github.com/arcticicestudio/nord-vim
-Plug 'arcticicestudio/nord-vim' ", { 'for': 'go' }
+"Plug 'arcticicestudio/nord-vim' ", { 'for': 'go' }
 " https://github.com/dikiaap/minimalist
 "Plug 'dikiaap/minimalist'
 " https://github.com/trevordmiller/nova-vim
-Plug 'trevordmiller/nova-vim'
+"Plug 'trevordmiller/nova-vim'
 " https://github.com/rakr/vim-one
-Plug 'rakr/vim-one'
+"Plug 'rakr/vim-one'
 " https://github.com/morhetz/gruvbox
 Plug 'morhetz/gruvbox'
 " https://github.com/dracula/vim
 "Plug 'dracula/vim'
 " https://github.com/ayu-theme/ayu-vim
-Plug 'ayu-theme/ayu-vim'
+"Plug 'ayu-theme/ayu-vim'
 
 " Initialize plugin system
 call plug#end()
