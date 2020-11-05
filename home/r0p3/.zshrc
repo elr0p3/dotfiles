@@ -44,9 +44,13 @@ zstyle ':prompt:pure:prompt:error' color red
     # fi
 # }
 
+
+
 # - - - PATH - - -
 PATH=$PATH:~/.local/bin
 export JAVA_HOME=/usr/lib/jvm/java-14-openjdk
+export VISUAL=nvim;
+export EDITOR=nvim;
 
 # - - - Initial config - - -
 # Lines configured by zsh-newuser-install
@@ -103,6 +107,8 @@ alias edit-clearine='nvim ~/.config/clearine.conf'
 alias edit-betterockscreen='nvim ~/.config/betterlockscreenrc'
 alias edit-xinitrc='nvim ~/.xinitrc'
 alias edit-javaWMdeloscojones='nvim /etc/profile.d/jre.sh'
+alias edit-alacritty='nvim ~/.config/alacritty/alacritty.yml'
+alias edit-ranger='cd ~/.config/ranger/ && nvim'
 alias load-average="uptime | grep -ohe 'load average[s:][: ].*' | awk '{ print $3" "$4" "$5"," }' | sed 's/,//g'"
 
 # - - - System - - -
