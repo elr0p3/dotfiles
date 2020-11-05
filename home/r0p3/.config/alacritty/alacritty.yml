@@ -1,5 +1,10 @@
 
-background_opacity: 0.9
+background_opacity: 0.95
+
+mouse:
+    # hide_cursor_when_typing: true
+    hide_when_typing: true
+
 
 font:
   normal:
@@ -19,6 +24,7 @@ font:
     style: Bold Italic
 
   size: 9
+
 
 window:
   padding:
