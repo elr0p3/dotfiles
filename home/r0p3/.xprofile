@@ -14,7 +14,10 @@ redshift -O 3000
 #xrandr --output DP-0 --mode 1920x1080 --rate 144.00
 #xrandr --output HDMI-0 --mode 2560x1440 --rate 144.00
 #xrandr --output "HDMI-0" --primary --mode 2560x1440 --rate 144.00 --output "DP-4" --mode 1920x1080 --rate 144.00 --left-of "HDMI-0" --rotate left
-xrandr --output "HDMI-0" --primary --mode 2560x1440 --rate 144.00 --output "DP-0" --mode 1920x1080 --rate 144.00 --left-of "HDMI-0" --rotate left
+#xrandr --output "HDMI-0" --primary --mode 2560x1440 --rate 144.00 --output "DP-0" --mode 1920x1080 --rate 144.00 --left-of "HDMI-0" --rotate left
+xrandr \
+ --output "HDMI-0" --auto --primary --mode 2560x1440 --rate 144.00 --pos 1080x2110 \
+ --output "DP-0" --auto --mode 1920x1080 --rate 144.00 --rotate left  --pos 0x1920
 
 
 # $HOME/.config/polybar/launch.sh
